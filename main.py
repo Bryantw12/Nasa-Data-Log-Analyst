@@ -1,6 +1,8 @@
 from collections import Counter
 import matplotlib.pyplot as plt
 import numpy as np
+
+
 myfile = open("NASA_access_log_Jul95", "r")
 
 ip_address= []
@@ -17,15 +19,26 @@ print(ip_address)
 
 c = Counter(ip_address)
 
-print(c.keys())
-print(c.values())
+newDict = dict()
 
-plt.bar(c.keys(), c.values())
+for key, value in c.items():
+    if value >=200:
+        newDict[key] = value
 
+
+print(newDict.keys())
+print(newDict.values())
+
+plt.bar(newDict.keys(), newDict.values())
+
+b = ip_address
 
 plt.xticks(rotation=30)
 
 plt.xticks(rotation=30, ha='right')
+
+print(newDict)
+
 plt.show()
 
-print(c)
+print(newDict)
