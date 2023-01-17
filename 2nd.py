@@ -5,19 +5,19 @@ import numpy as np
 
 myfile = open("NASA_access_log_Jul95", "r")
 
-ip_address= []
+datetime= []
 
 try:
     for line in myfile:
     
-        ip_address.append(line.split(" ")[0])
+        datetime.append(line.split(" ")[3])
 
 except:
    print("uh oh")
 
-print(ip_address)
+print(datetime)
 
-c = Counter(ip_address)
+c = Counter(datetime)
 
 newDict = dict()
 
@@ -48,13 +48,12 @@ r3 = [3,4,7,8,11,12]
 r4 = r1 + r2 + r3
  
 # Create legend
-plt.legend()
 
 plt.xticks(rotation=30, ha='right')
 
 plt.show()
 
-b = ip_address
+b = datetime
 
 plt.xticks(rotation=30)
 
