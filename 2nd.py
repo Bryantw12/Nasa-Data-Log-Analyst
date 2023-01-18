@@ -30,29 +30,18 @@ print(newDict.values())
 
 barWidth = 0.9
 
-plt.bar(newDict.keys(), newDict.values(), width = barWidth, color = (0.3,0.1,0.4,0.6))
+# plt.bar(newDict.keys(), newDict.values(), width = barWidth, color = (0.3,0.1,0.4,0.6))
 
  
-# Create bars
-barWidth = 0.9
-bars1 = [3, 3, 1]
-bars2 = [4, 2, 3]
-bars3 = [4, 6, 7, 10, 4, 4]
-bars4 = bars1 + bars2 + bars3
- 
-# The X position of bars
-r1 = [1,5,9]
-r2 = [2,6,10]
-r3 = [3,4,7,8,11,12]
-r4 = r1 + r2 + r3
- 
-# Create legend
 
-plt.xticks(rotation=30, ha='right')
+# Plot
+plt.plot(newDict.keys['Date'],newDict.values['Temp'])
 
-plt.show()
 
-b = datetime
+
+
+
+
 
 plt.xticks(rotation=30)
 
