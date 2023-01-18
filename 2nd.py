@@ -22,8 +22,7 @@ c = Counter(datetime)
 newDict = dict()
 
 for key, value in c.items():
-    if value >=500:
-        newDict[key] = value
+    newDict[key] = value
 
 
 print(newDict.keys())
