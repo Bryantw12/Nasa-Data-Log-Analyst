@@ -10,7 +10,7 @@ datetime= []
 try:
     for line in myfile:
     
-        datetime.append(line.split(" ")[3])
+        datetime.append(line.split(" ")[6])
 
 except:
    print("uh oh")
@@ -22,32 +22,32 @@ c = Counter(datetime)
 newDict = dict()
 
 for key, value in c.items():
-    newDict[key] = value
+     if value >=2500:
+        newDict[key] = value
+   
 
 
 print(newDict.keys())
 print(newDict.values())
 
-barWidth = 0.9
-
-# plt.bar(newDict.keys(), newDict.values(), width = barWidth, color = (0.3,0.1,0.4,0.6))
-
- 
-
-# Plot
-plt.plot(newDict.keys['Date'],newDict.values['Temp'])
 
 
+plt.show()
+ax = plt.axes()
+ax.set_facecolor("black")
 
-
-
+plt.plot(newDict.keys(),newDict.values(),color = ("red"))
 
 
 plt.xticks(rotation=30)
 
-
 print(newDict)
 
+plt.title("Most used files accessed from server")
+plt.ylabel("Numbers of most files accessed")
+plt.xlabel("Files")
+
+plt.tick_params(axis='x', which='major', labelsize=6)
 plt.show()
 
 print(newDict)

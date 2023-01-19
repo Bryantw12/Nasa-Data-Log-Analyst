@@ -58,7 +58,6 @@ b = ip_address
 
 plt.xticks(rotation=30)
 
-
 print(newDict)
 
 plt.show()
